@@ -1,6 +1,5 @@
 package com.aws.model;
 
-import com.aws.dto.UsuarioRequestDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -25,10 +24,10 @@ public class Usuario  implements UserDetails {
     private String login;
     private String senha;
 
-    public Usuario(UsuarioRequestDTO usuarioRequestDTO){
-        this.login = usuarioRequestDTO.login();
-        this.senha = usuarioRequestDTO.senha();
-    }
+//    public Usuario(UsuarioRequestDTO usuarioRequestDTO){
+//        this.login = usuarioRequestDTO.login();
+//        this.senha = usuarioRequestDTO.senha();
+//    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
